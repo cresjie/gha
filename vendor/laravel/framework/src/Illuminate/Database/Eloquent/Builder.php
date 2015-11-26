@@ -265,6 +265,8 @@ class Builder
      * @param  string  $pageName
      * @param  int|null  $page
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     *
+     * @throws \InvalidArgumentException
      */
     public function paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
     {
@@ -722,14 +724,14 @@ class Builder
             $relationQuery->wheres, $relationQuery->getBindings()
         );
 
-        $this->query->mergeBindings($hasQuery->getQuery());
+        $this->query->addBinding($hasQuery->getQuery()->getBindings(), 'where');
     }
 
     /**
      * Get the "has relation" base query instance.
      *
      * @param  string  $relation
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \Illuminate\Database\Eloquent\Relations\Relation
      */
     protected function getHasRelationQuery($relation)
     {

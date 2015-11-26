@@ -146,7 +146,8 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class
+        Intervention\Image\ImageServiceProvider::class,
+        Mews\Purifier\PurifierServiceProvider::class
 
     ],
 
@@ -199,7 +200,8 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
-        'Image'     => Intervention\Image\Facades\Image::class
+        'Image'     => Intervention\Image\Facades\Image::class,
+        'Purifier'  => Mews\Purifier\Facades\Purifier::class,
 
     ],
 
