@@ -11,7 +11,7 @@ class Relationship extends Model
 
 	protected $fillable = ['locality','administrative_area_level_1','country','coordinates'];
 
-	protected $hidden = ['trackable_name'];
+	//protected $hidden = ['trackable_name'];
 
 
 	static public function createRules()
@@ -32,6 +32,11 @@ class Relationship extends Model
 			'country'	=> '',
 			'coordinates' => 'array'
 		];
+	}
+
+	public function trackable()
+	{
+		return $this->morpTo();
 	}
 
 

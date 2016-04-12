@@ -421,7 +421,7 @@ app.controller('GigEventController',function($scope, $http, $rootScope, $timeout
 		
 		if( $scope.gig_event.requisite == 'ticket'){
 			saveTickets();
-		}else if( $scop.gig_event.requisite == 'rsvp'){
+		}else if( $scope.gig_event.requisite == 'rsvp'){
 			saveRsvp();
 		}else{
 			$scope.$emit('requisite.saved');

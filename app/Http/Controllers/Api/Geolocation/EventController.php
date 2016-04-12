@@ -44,9 +44,10 @@ class EventController extends Controller
 		$location = new Relationship;
 		$location->fill( Input::all() );
 		$location->trackable_name = GigEvent::class;
+		$location->trackable_id = $gigEvent->id;
 
 		$rules = $gigEvent->publish ? Relationship::createRules() : Relationship::draftRules();
-		$validator = Validator::make($location, $rules);
+		$validator = Validator::make($location->toArray(), $rules);
 		if( $validator->fails() )
 			return Response::json(['success' => false, 'error_msg' => $validator->messages() ]);
 

@@ -48,4 +48,9 @@ class GigEvent extends Model
 			'privacy' => 'in:public,private'
 		];
 	}
+
+	public function geolocation()
+	{
+		return $this->morphOne('App\Models\Geolocation\Relationship','trackable');
+	}
 }
