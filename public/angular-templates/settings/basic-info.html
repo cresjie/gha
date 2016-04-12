@@ -1,0 +1,104 @@
+<div id="basic-info" class="tab-pane">
+
+			<div id="error-input-box" class="row" style="display:none">
+				<div class="col-sm-4">
+					<div class="alert alert-warning">
+						<table class="inherit-color">
+							<tbody>
+								<tr>
+									<td><i class="icon-lg fa fa-exclamation-triangle"></i></td>
+									<td><div class="pad-10"> Invalid input.<br>Check the fields. </div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>			
+			</div>
+			<div class="form-group" ng-class="{'has-error':errors.email}">
+				<label class="control-label">Email</label>
+				<div class="row">
+					<div class="col-sm-4">
+						<input type="text" class="form-control" disabled="disabled" name="email" ng-model="user.email">
+						<p class="help-block" ng-repeat="error in errors.email">{{error}}</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="form-group" ng-class="{'has-error':errors.first_name}">
+						<label class="control-label">First Name</label>
+						<input type="text" class="form-control" name="first_name" ng-model="user.first_name">
+						<p class="help-block" ng-repeat="error in errors.first_name">{{error}}</p>					
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label class="control-label">Middle Name</label>
+						<input  type="text" class="form-control" name="middle_name" ng-model="user.middle_name">					
+					</div>
+				</div>	
+				<div class="col-sm-4">
+					<div class="form-group" ng-class="{'has-error':errors.last_name}">
+						<label class="control-label">Last Name</label>
+						<input type="text" class="form-control" name="last_name" ng-model="user.last_name">	
+						<p class="help-block" ng-repeat="error in errors.last_name">{{error}}</p>			
+					</div>
+				</div>
+				<div class="col-sm-1">
+					<div class="form-group">
+						<label class="control-label">Suffix</label>
+						<input type="text" class="form-control" name="suffix" ng-model="user.suffix">					
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group slug-wrapper" ng-controller="SlugController">
+				<label>Link</label>
+				<div>
+					<span>http://localhost/gighubapp3/public/</span><span ng-hide="slug_editing">{{user.slug}}</span>
+				<input type="text" name="group_slug" ng-model="slug" ng-show="slug_editing" ng-focus-this="slug_editing" ng-blur="doneEdit()">
+				<a href="javascript:;" class="btn-edit" ng-click="slugEdit()" ng-hide="slug_editing"><i class="glyphicon glyphicon-pencil"></i></a>
+
+				</div>
+				
+			</div>
+
+			<div class="form-group" ng-class="{'has-error':errors.gender}">
+				<label class="control-label">Gender</label>
+				<div class="row">
+					<div class="col-sm-4">
+						<select class="form-control" name="gender" ng-model="user.gender">
+							<option value="male">Male</option>
+							<option value="female">female</option>
+						</select>
+						<p class="help-block" ng-repeat="error in errors.gender">{{error}}</p>
+					</div>
+				</div>		
+			</div>
+			<!--
+			<div class="form-group">
+				<label class="control-label">Telephone</label>
+				<div class="row">
+					<div class="col-sm-4">
+						<input class="form-control" name="telephone" type="text">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label">Mobile</label>
+				<div class="row">
+					<div class="col-sm-4">
+						<input class="form-control" name="mobile" type="text">					
+					</div>
+				</div>
+			</div>
+			-->
+			<div class="btn-action-group">
+				<button class="btn btn-primary" ng-click="update()">Update</button>
+				<button class="btn btn-default" ng-click="cancel()"><i class="glyphicon glyphicon-remove"></i> Cancel</button>
+
+			</div>
+			
+		</div> <!-- END #basic-info-->

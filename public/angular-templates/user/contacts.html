@@ -1,0 +1,37 @@
+<div class="contacts-tab">
+
+	
+	<div class="row">
+		<div class="col-xs-6 col-sm-2" ng-repeat="contact in contacts">
+			<div class="contact-card">
+				<div class="">
+					<img class="img-responsive circle block-center" src="http://localhost/pp/w200/{{contact.profile_img ? contact.profile_img : 'user-default.png'}}">
+				</div>
+				<div class="text-center">
+					<h5><a class="text-ellipsis color-black" title="{{contact.first_name}} {{contact.last_name}}" href="">{{contact.first_name}} {{contact.last_name}}</a></h5>	
+				</div>
+				
+				<div class="row contact-nav">
+					<ul class="nav row">
+							<li class="col-xs-6 col-sm-4 col-lg-6">
+								<!--<a href=""><i class="fa fa-wechat"></i></a>-->
+							</li>
+							<li class="dropdown col-xs-6 col-sm-8 col-lg-6">
+								<a data-toggle="dropdown" href="#" aria-expanded="false" class="text-right"><span class="glyphicon glyphicon-cog"></span> <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a ng-click="delete(contact)" href>Remove</a></li>
+								</ul>
+							</li>
+						</ul>
+				</div>
+
+			</div>
+		</div>
+			
+	</div>
+
+	<div ng-if="!contacts.length && firstLoadContacts">
+		<h4 class="emblem-xs text-center gray">Empty</h4>
+	</div>
+	{{percent}}
+</div>

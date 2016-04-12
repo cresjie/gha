@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/London',//'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'ukvRzvoJPTquzYPL4KRLXJt4ePPvJYKD'),
+    'key' => env('APP_KEY', 'GigHubAppCopyrightTrademark2015.'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -144,6 +144,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        App\Providers\ExtendedValidatorServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
@@ -197,8 +198,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
+        'Model'     => Illuminate\Database\Eloquent\Model::class,
+        'Str'       => Illuminate\Support\Str::class,
+
         'Form'      => Collective\Html\FormFacade::class,
-        'Html'      => Collective\Html\HtmlFacade::class,
+        'HTML'      => Collective\Html\HtmlFacade::class,
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
         'Image'     => Intervention\Image\Facades\Image::class,
         'Purifier'  => Mews\Purifier\Facades\Purifier::class,

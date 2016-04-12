@@ -75,6 +75,11 @@ return [
     'unique'               => 'The :attribute has already been taken.',
     'url'                  => 'The :attribute format is invalid.',
 
+
+    "max_date_to"          => "The :attribute may not be greater than :other.",
+    "min_date_to"          => "The :attribute may not be less than :other.",
+    "min_to"                => "The :attribute may not be greater than to :other",
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines

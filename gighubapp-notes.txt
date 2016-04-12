@@ -1,0 +1,4 @@
+content:
+	
+	forgot password
+	email templates

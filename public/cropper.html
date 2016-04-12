@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/library/cropper/cropper.min.css">
+	<script src="js/library/jquery/jquery-1.10.1.min.js"></script>
+	<script src="js/library/cropper/cropper.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('img').cropper({
+				aspectRatio:1,
+				viewMode: 1,
+				//zoomable: false
+				crop: function(){
+					var data = $(this).cropper('getData');
+					console.log(data);
+				}
+			});
+		});
+		
+	</script>
+</head>
+<body>
+
+	<div>
+		<img id="" src="images/logo/main-logo-old.png">
+	</div>
+</body>
+</html>

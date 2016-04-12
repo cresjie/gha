@@ -1,0 +1,39 @@
+/******GIG GROUP****/
+.group-cover-wrapper{
+	position: relative;
+	min-height: 250px;
+}
+
+.group-cover-bottom{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 5px;
+}
+
+.group-name-wrapper{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 500px;
+	display: inline-block;
+	background: #F0F0F0;
+	background: rgba(240, 240, 240, 0.69);
+	border-radius: 3px;
+	padding: 5px;
+}
+.group-name{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0;
+}
+.gig-group-navs li a{
+	display: table-cell;
+	height: 62px;
+	vertical-align: middle;
+	min-width: 75px;
+	text-align: center;
+}
+.btn-action-group{
+	margin-top: 50px;
+}

@@ -1,0 +1,32 @@
+.home-jumbotron{
+	background-repeat: no-repeat;
+  	background-size: cover;
+}
+.category-link{
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding: 5px 0;
+}
+.category-link:hover,
+.category-link:focus{
+	color: #000;
+	text-decoration: none;
+}
+.category-link:hover .cat-wrapper{
+	-webkit-transform: scale(.95);
+		-moz-transform: scale(.95);
+		-ms-transform: scale(.95);
+		 -o-transform: scale(.95);
+		 	transform: scale(.95);
+}
+.category-link .cat-wrapper{
+	padding: 100px 0;
+	text-align: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.category-link .category-name{
+	padding: 10px;
+	background: rgba(255,255,255,.5);
+}
